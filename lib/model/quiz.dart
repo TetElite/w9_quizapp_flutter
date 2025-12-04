@@ -97,4 +97,3 @@ class QuizResult {
     return (score / totalQuestions) * 100;
   }
 }
- 
