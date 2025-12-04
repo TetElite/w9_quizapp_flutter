@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:device_preview/device_preview.dart';
 import '../model/quiz.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/question_screen.dart';
@@ -94,6 +95,8 @@ class _QuizAppState extends State<QuizApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: true,
